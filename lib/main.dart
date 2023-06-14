@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
                   height: 150,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: 6,
+                    itemCount: 10,
                     itemBuilder: (context, index) {
                       return Card(
                         child: Padding(
