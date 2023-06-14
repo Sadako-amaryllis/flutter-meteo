@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter_svg/flutter_svg.dart';
+
 
 void main() {
   runApp(WeatherApp());
@@ -105,6 +107,40 @@ class _WeatherAppState extends State<WeatherApp> {
                     ],
                   ),
                 ],
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Temps des jours à venir',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Lever et coucher de soleil',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
+      // FOOTER
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          height: 50.0,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                icon: Icon(Icons.home),
+                onPressed: () {
+                  // Actions lorsque l'utilisateur appuie sur le bouton "Accueil"
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.settings),
+                onPressed: () {
+                  // Actions lorsque l'utilisateur appuie sur le bouton "Paramètres"
+                },
               ),
         // FOOTER
         bottomNavigationBar: BottomAppBar(
