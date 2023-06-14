@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 
 void main() {
@@ -29,6 +30,9 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          // SvgPicture.asset(
+          //   "assets/images/soleiltest.svg"
+          // ),
           Text(
             'Paris',
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -79,6 +83,16 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Temps des jours à venir',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Lever et coucher de soleil',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
         ],
       ),
