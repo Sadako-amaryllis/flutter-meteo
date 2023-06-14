@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Weather App'),
+        title: Text('Weather Naut'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,29 +48,32 @@ class HomePage extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 6,
-                  itemBuilder: (context, index) {
-                    return Card(
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Text(
-                              '14:00',
-                              style: TextStyle(fontSize: 18),
-                            ),
-                            Icon(Icons.wb_sunny),
-                            Text(
-                              '27°C',
-                              style: TextStyle(fontSize: 16),
-                            ),
-                          ],
+                child: Container(
+                  height: 150,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 6,
+                    itemBuilder: (context, index) {
+                      return Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Text(
+                                '14:00',
+                                style: TextStyle(fontSize: 18),
+                              ),
+                              Icon(Icons.wb_sunny),
+                              Text(
+                                '27°C',
+                                style: TextStyle(fontSize: 16),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    );
-                  },
+                      );
+                    },
+                  ),
                 ),
               ),
             ],
