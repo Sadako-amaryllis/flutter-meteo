@@ -22,10 +22,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Weather Naut'),
+        title: Text('Weather App'),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
             'Paris',
@@ -79,6 +79,29 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ],
+      ),
+      // FOOTER
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          height: 50.0,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                icon: Icon(Icons.home),
+                onPressed: () {
+                  // Actions lorsque l'utilisateur appuie sur le bouton "Accueil"
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.settings),
+                onPressed: () {
+                  // Actions lorsque l'utilisateur appuie sur le bouton "Paramètres"
+                },
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
