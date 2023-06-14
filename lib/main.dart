@@ -115,6 +115,15 @@ class _WeatherAppState extends State<WeatherApp> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Weather App'),
+          leading: IconButton(
+            icon: Icon(Icons.add_location_alt_sharp),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => NewCountry()),
+              );
+            },
+          ),
         ),
         body: weatherData == null
             ? const Center(child: CircularProgressIndicator())

@@ -5,10 +5,10 @@ class NewCountry extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Nouvelle Page'),
+        title: const Text('New Country'),
       ),
       body: const Center(
-        child: Text('Contenu de la nouvelle page'),
+        child: Text('Contenu de la nouvelle page !!!!!!!!!!!!!!!!!!!'),
       ),
     );
   }
