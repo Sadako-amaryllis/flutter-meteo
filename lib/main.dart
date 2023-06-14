@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 void main() {
-  runApp(WeatherApp());
+  runApp(const WeatherApp());
 }
 
 class WeatherApp extends StatefulWidget {
+  const WeatherApp({super.key});
+
   @override
   _WeatherAppState createState() => _WeatherAppState();
 }
@@ -18,7 +20,7 @@ class _WeatherAppState extends State<WeatherApp> {
   @override
   void initState() {
     super.initState();
-    fetchWeatherData('Paris'); // Initialize with the default city (Paris)
+    fetchWeatherData('Paris'); // Initialize with the default city
   }
 
   Future<void> fetchWeatherData(String city) async {
@@ -43,56 +45,59 @@ class _WeatherAppState extends State<WeatherApp> {
       children: [
         Text(
           weatherData!['location']['name'],
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
         Text(
           '${weatherData!['current']['temp_c'].toInt()}°C',
-          style: TextStyle(fontSize: 48),
+          style: const TextStyle(fontSize: 48),
         ),
         Text(
           weatherData!['current']['condition']['text'],
-          style: TextStyle(fontSize: 18),
+          style: const TextStyle(fontSize: 18),
         ),
-        SizedBox(height: 20),
-        Text(
+        const SizedBox(height: 20),
+        const Text(
           'Prochaines heures',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
+        // ignore: avoid_unnecessary_containers
         Container(
-          height: 150,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: 6,
-            itemBuilder: (context, index) {
-              return Card(
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Text(
-                        '14:00',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      Icon(Icons.wb_sunny),
-                      Text(
-                        '27°C',
-                        style: TextStyle(fontSize: 16),
-                      ),
-                    ],
+          child: SizedBox(
+            height: 150,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return const Card(
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          '14:00',
+                          style: TextStyle(fontSize: 18),
+                        ),
+                        Icon(Icons.wb_sunny),
+                        Text(
+                          '27°C',
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              );
-            },
+                );
+              },
+            ),
           ),
         ),
-        SizedBox(height: 20),
-        Text(
+        const SizedBox(height: 20),
+        const Text(
           'Temps des jours à venir',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
-        SizedBox(height: 20),
-        Text(
+        const SizedBox(height: 20),
+        const Text(
           'Lever et coucher de soleil',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
@@ -109,25 +114,25 @@ class _WeatherAppState extends State<WeatherApp> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Weather App'),
+          title: const Text('Weather App'),
         ),
         body: weatherData == null
-            ? Center(child: CircularProgressIndicator())
+            ? const Center(child: CircularProgressIndicator())
             : buildWeatherForecast(),
         bottomNavigationBar: BottomAppBar(
-          child: Container(
+          child: SizedBox(
             height: 50.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
-                  icon: Icon(Icons.home),
+                  icon: const Icon(Icons.home),
                   onPressed: () {
                     // Actions when the user presses the "Home" button
                   },
                 ),
                 IconButton(
-                  icon: Icon(Icons.settings),
+                  icon: const Icon(Icons.settings),
                   onPressed: () {
                     // Actions when the user presses the "Settings" button
                   },
