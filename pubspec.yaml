@@ -24,3 +24,14 @@ flutter:
   
   assets:
     - assets/images/soleiltest.svg
+    - assets/images/Clouds.svg
+    - assets/images/Fog.svg
+    - assets/images/Moon.svg
+    - assets/images/NightCloud.svg
+    - assets/images/Rain.svg
+    - assets/images/Snow.svg
+    - assets/images/Storm.svg
+    - assets/images/Sun&Clouds.svg
+    - assets/images/Sun.svg
+    - assets/images/Wind.svg
+

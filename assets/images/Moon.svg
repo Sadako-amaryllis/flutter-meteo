@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 54 54">
+  <defs>
+    <radialGradient id="radial-gradient" cx="783.83" cy="10.07" fx="783.83" fy="10.07" r="51.26" gradientTransform="translate(817.01) rotate(-180) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8f8f8"/>
+      <stop offset=".16" stop-color="#ede9f1"/>
+      <stop offset="1" stop-color="#9b9da2"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="1736.96" cy="-1685.68" fx="1736.96" fy="-1685.68" r="7.69" gradientTransform="translate(-1233.22 -4201.03) rotate(126.03) scale(1.43 2.08) skewX(-4.38)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".1" stop-color="#fff" stop-opacity=".85"/>
+      <stop offset=".29" stop-color="#fff" stop-opacity=".59"/>
+      <stop offset=".47" stop-color="#fff" stop-opacity=".38"/>
+      <stop offset=".63" stop-color="#fff" stop-opacity=".22"/>
+      <stop offset=".78" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset=".91" stop-color="#fff" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="Degradado_sin_nombre_34" data-name="Degradado sin nombre 34" cx="-2223.96" cy="2475" fx="-2223.96" fy="2475" r="7.43" gradientTransform="translate(-3143.43 -604.23) rotate(-136.79) scale(1.61 .68) skewX(11.83)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".1" stop-color="#fff" stop-opacity=".85"/>
+      <stop offset=".29" stop-color="#fff" stop-opacity=".59"/>
+      <stop offset=".47" stop-color="#fff" stop-opacity=".38"/>
+      <stop offset=".63" stop-color="#fff" stop-opacity=".22"/>
+      <stop offset=".78" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset=".91" stop-color="#fff" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g fill="none" class="cls-4">
+    <g id="Calque_2" data-name="Calque 2">
+      <g id="OBJECTS">
+        <g>
+          <path fill="url(#radial-gradient)" d="m0,27c0,14.91,12.09,27,27,27s27-12.09,27-27S41.91,0,27,0,0,12.09,0,27Z"/>
+          <g>
+            <path fill="#acadb2" d="m8.13,31.78c2.54-.23,4.35-3.11,4.05-6.43-.3-3.32-2.6-5.83-5.13-5.6-2.54.23-4.35,3.11-4.05,6.43.3,3.32,2.6,5.83,5.13,5.6Z"/>
+            <path fill="#acadb2" d="m5.94,34.19c-1.52.8-1.9,3.06-.86,5.05,1.04,1.99,3.12,2.96,4.64,2.16,1.52-.8,1.9-3.06.86-5.05-1.04-1.99-3.12-2.96-4.64-2.16Z"/>
+            <path fill="#acadb2" d="m11.96,31.8c-.9.47-1.12,1.81-.51,2.98s1.85,1.75,2.74,1.28c.9-.47,1.12-1.81.51-2.98-.62-1.18-1.85-1.75-2.74-1.28Z"/>
+            <path fill="#acadb2" d="m51.94,27.98c-.47-3.3-2.89-5.69-5.41-5.34-2.52.36-4.19,3.32-3.72,6.62.46,3.3,2.89,5.69,5.41,5.33,2.52-.36,4.19-3.32,3.72-6.62Z"/>
+            <path fill="#acadb2" d="m48.61,20.12c1.48-.88,1.75-3.15.6-5.09-1.14-1.93-3.27-2.79-4.75-1.92-1.48.87-1.75,3.15-.6,5.08,1.14,1.94,3.27,2.79,4.75,1.92Z"/>
+            <path fill="#acadb2" d="m43.07,19.81c-.68-1.14-1.93-1.65-2.8-1.13-.87.52-1.03,1.86-.36,3,.68,1.14,1.93,1.65,2.8,1.13.87-.52,1.03-1.86.36-3Z"/>
+          </g>
+          <g>
+            <path fill="url(#radial-gradient-2)" d="m31.12,24.22c-6.87-5.58-9.56-14.07-6-18.97,3.57-4.9,12.03-4.35,18.91,1.22,6.87,5.58,9.56,14.08,5.99,18.97-3.57,4.91-12.04,4.36-18.91-1.22Z"/>
+            <path fill="url(#Degradado_sin_nombre_34)" d="m3.14,32.97c.91-2.99,5.54-1.75,10.35,2.77,4.8,4.51,7.96,10.59,7.05,13.58-.91,2.98-5.54,1.75-10.35-2.76-4.8-4.51-7.96-10.6-7.05-13.58Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

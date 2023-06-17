@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(WeatherApp());
@@ -38,6 +39,29 @@ class _WeatherAppState extends State<WeatherApp> {
   }
 
   Widget buildWeatherForecast() {
+    final currentCondition = weatherData!['current']['condition']['text'];
+    String weatherImage = 'assets/images/Sun.svg';
+
+    if (currentCondition.contains('cloud')) {
+      weatherImage = 'assets/images/Clouds.svg';
+    } else if (currentCondition.contains('fog')) {
+      weatherImage = 'assets/images/Fog.svg';
+    } else if (currentCondition.contains('moon')) {
+      weatherImage = 'assets/images/Moon.svg';
+    } else if (currentCondition.contains('night')) {
+      weatherImage = 'assets/images/NightCloud.svg';
+    } else if (currentCondition.contains('rain')) {
+      weatherImage = 'assets/images/Rain.svg';
+    } else if (currentCondition.contains('snow')) {
+      weatherImage = 'assets/images/Snow.svg';
+    } else if (currentCondition.contains('storm')) {
+      weatherImage = 'assets/images/Storm.svg';
+    } else if (currentCondition.contains('sun')) {
+      weatherImage = 'assets/images/Sun&Clouds.svg';
+    } else if (currentCondition.contains('wind')) {
+      weatherImage = 'assets/images/Wind.svg';
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -49,8 +73,15 @@ class _WeatherAppState extends State<WeatherApp> {
           '${weatherData!['current']['temp_c'].toInt()}°C',
           style: TextStyle(fontSize: 48),
         ),
+        SizedBox(height: 10),
+        SvgPicture.asset(
+          weatherImage,
+          height: 100,
+          width: 100,
+        ),
+        SizedBox(height: 10),
         Text(
-          weatherData!['current']['condition']['text'],
+          currentCondition,
           style: TextStyle(fontSize: 18),
         ),
         SizedBox(height: 20),
