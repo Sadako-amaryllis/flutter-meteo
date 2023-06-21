@@ -137,7 +137,6 @@ class _WeatherAppState extends State<WeatherApp> {
                 leading: const Icon(Icons.home),
                 title: const Text('Accueil'),
                 onTap: () {
-                  Navigator.pop(context); // Close the drawer
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => WeatherApp()),
@@ -148,7 +147,6 @@ class _WeatherAppState extends State<WeatherApp> {
                 leading: const Icon(Icons.settings),
                 title: const Text('Paramètres'),
                 onTap: () {
-                  Navigator.pop(context);
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => NewCountryPage()),
