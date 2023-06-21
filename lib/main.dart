@@ -111,6 +111,9 @@ class _WeatherAppState extends State<WeatherApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      routes: {
+        '/newcountry': (context) => NewCountryPage(),
+      },
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Weather App'),
@@ -135,15 +138,21 @@ class _WeatherAppState extends State<WeatherApp> {
                 title: const Text('Accueil'),
                 onTap: () {
                   Navigator.pop(context); // Close the drawer
-                  // Actions when the user taps on "Accueil"
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => WeatherApp()),
+                  );
                 },
               ),
               ListTile(
                 leading: const Icon(Icons.settings),
                 title: const Text('Paramètres'),
                 onTap: () {
-                  Navigator.pop(context); // Close the drawer
-                  // Actions when the user taps on "Paramètres"
+                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NewCountryPage()),
+                  );
                 },
               ),
             ],
@@ -152,6 +161,7 @@ class _WeatherAppState extends State<WeatherApp> {
         body: weatherData == null
             ? const Center(child: CircularProgressIndicator())
             : buildWeatherForecast(),
+
       ),
     );
   }
