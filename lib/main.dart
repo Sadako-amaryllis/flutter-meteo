@@ -8,7 +8,7 @@ void main() {
 }
 
 class WeatherApp extends StatefulWidget {
-  const WeatherApp({super.key});
+  const WeatherApp({Key? key});
 
   @override
   _WeatherAppState createState() => _WeatherAppState();
@@ -61,7 +61,6 @@ class _WeatherAppState extends State<WeatherApp> {
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 10),
-        // ignore: avoid_unnecessary_containers
         Container(
           child: SizedBox(
             height: 150,
@@ -115,41 +114,44 @@ class _WeatherAppState extends State<WeatherApp> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Weather App'),
-          leading: IconButton(
-            icon: Icon(Icons.add_location_alt_sharp),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => NewCountry()),
-              );
-            },
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(
+                decoration: const BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: const Text(
+                  'Menu',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              ListTile(
+                leading: const Icon(Icons.home),
+                title: const Text('Accueil'),
+                onTap: () {
+                  Navigator.pop(context); // Close the drawer
+                  // Actions when the user taps on "Accueil"
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.settings),
+                title: const Text('Paramètres'),
+                onTap: () {
+                  Navigator.pop(context); // Close the drawer
+                  // Actions when the user taps on "Paramètres"
+                },
+              ),
+            ],
           ),
         ),
         body: weatherData == null
             ? const Center(child: CircularProgressIndicator())
             : buildWeatherForecast(),
-        bottomNavigationBar: BottomAppBar(
-          child: SizedBox(
-            height: 50.0,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                IconButton(
-                  icon: const Icon(Icons.home),
-                  onPressed: () {
-                    // Actions when the user presses the "Home" button
-                  },
-                ),
-                IconButton(
-                  icon: const Icon(Icons.settings),
-                  onPressed: () {
-                    // Actions when the user presses the "Settings" button
-                  },
-                ),
-              ],
-            ),
-          ),
-        ),
       ),
     );
   }
